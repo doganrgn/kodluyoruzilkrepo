@@ -1,0 +1,55 @@
+                     +-------------------+
+                     |   AirlineCompany  |
+                     +-------------------+
+                     | - id: int         |
+                     | - name: String    |
+                     |                   |
+                     | + getFlights(): List<Flight> |
+                     | + getAircrafts(): List<Aircraft> |
+                     | + getPilots(): List<Pilot>     |
+                     +-------------------+
+                          /      |       \
+                         /       |        \
+                        /        |         \
+      +-------------------+          +---------------------------+ +----------------------+
+      |      Aircraft     |          |       Flight              | |        Pilot         |
+      +-------------------+          +---------------------------+ +----------------------+
+      | - id: int         |          | - id: int                 | | - id: int            |
+      | - type: String    |          | - airline: AirlineCompany |
+      | - status: String  |          | - origin: Airport         |
+      |                   |          | - destination: Airport    |
+      | + isOperational(): boolean|  | - departureTime: DateTime |
+      |                   |          | - arrivalTime: DateTime   |
+      |                   |          | - aircraft: Aircraft      |
+      +-------------------+          | - captain: Pilot          |
+                                     | - coPilot: Pilot          |
+                                     +---------------------------+
+                                       /          |          \
+                                      /           |           \
+                                     /            |            \
+                        +------------+     +------------+        +------------------------+
+                        |   Airport  |     |   Pilot    |        |   Flight               |
+                        +------------+     +------------+        +------------------------+
+                        | - id: int  |     | - id: int  |        | - id: int              |
+                        | - name: String | | - name: String |    | - flightNumber: String |
+                        |            |     | - experience: int | |                        |
+                        +------------+     +-------------------+ +------------------------+
+
+
+Bu sınıf diyagramı aşağıdaki temel bileşenleri içerir:
+
+AirlineCompany: Hava yolu şirketlerini temsil eden ana sınıf. 
+Şirketin kimliği, ismi, uçuşları, uçakları ve pilotları gibi özelliklere sahiptir.
+
+Aircraft: Uçakları temsil eden sınıf. Her uçağın bir kimliği, türü (type), durumu (status) gibi özellikleri vardır. 
+Ayrıca, bir uçağın çalışır durumda olup olmadığını kontrol eden isOperational işlevi bulunur.
+
+Flight: Uçuşları temsil eden sınıf. Her uçuşun kimliği, hava yolu şirketi, kalkış havaalanı, varış havaalanı, kalkış saati, varış saati gibi özellikleri bulunur. 
+Ayrıca, uçuşun hangi uçağa ait olduğunu ve hangi pilotlar tarafından yönetildiğini belirten ilişkileri içerir.
+
+Airport: Havaalanlarını temsil eden sınıf. Her havaalanının kimliği ve ismi gibi özellikleri bulunur.
+
+Pilot: Pilotları temsil eden sınıf. Her pilotun kimliği, ismi, deneyim seviyesi gibi özellikleri bulunur.
+
+Bu sınıf diyagramı, hava yolu şirketlerinin uçuşlarını, uçaklarını, pilotlarını ve havaalanlarını yönetmek için temel bir yapı sunar. 
+İlişkiler sayesinde her bir bileşen arasındaki bağlantıları gösterir ve bu şekilde sistemin nasıl çalıştığını anlamamıza yardımcı olur.

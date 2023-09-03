@@ -1,0 +1,29 @@
+         +-----------------+
+         |   University    |
+         +-----------------+
+         |                 |
+         | - Departments   |
+         | - Employees     |
+         +-----------------+
+                 |
+         +-------|-------+
+         |               |
+  +------|---+    +------|---+
+  | Office   |    |Department|
+  +----------+    +----------+
+  |          |    |          |
+  |-Employees|    |- Offices |
+  +----------+    +----------+
+                 |
+         +-------|-------+
+         |               |
+  +------|---+    +------|---+
+  | Professor|    | Officer  |
+  +----------+    +----------+
+
+Bu Class diyagramı, bir üniversitenin yapısını temsil ediyor. 
+University sınıfı üniversiteyi temsil eder ve içinde departmanlar ve çalışanlar bulunur. 
+Department sınıfı departmanları temsil eder ve bu departmanlara ait ofisleri içerir. 
+Office sınıfı ofisleri temsil eder ve bu ofislerde çalışanları içerir. 
+Çalışanlar iki türde olabilir: Professor (profesör) ve Officer (memur). 
+İlişkiler, her departmanın ofislere ve her çalışanın bir ofiste çalıştığı şekilde tasarlanmıştır.

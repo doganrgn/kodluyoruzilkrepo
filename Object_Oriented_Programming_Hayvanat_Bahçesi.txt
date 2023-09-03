@@ -1,0 +1,31 @@
+                    +-----------------------+
+                    |      Animal           |
+                    +-----------------------+
+                    | - name: String        |
+                    | - weight: double      |
+                    | - age: int            |
+                    +-----------------------+
+                    | + getDosage(): double |
+                    | + getFeedSchedule(): String |
+                    | + makeSound(): void   |
+                    +-----------------------+
+                            /      |       \
+                           /       |        \
+                          /        |         \
+         +-------------------+ +------------------+ +--------------------+
+         |      Horse        | |    Feline        | |    Rodent          |
+         +-------------------+ +------------------+ +--------------------+
+         |                   | |                  | |                    |
+         | + breed: String  | | + breed: String  | | + breed: String    |
+         |                   | |                  | |                    |
+         +-------------------+ +------------------+ +--------------------+
+         | + makeSound(): void| | + makeSound(): void| + makeSound(): void|
+         +-------------------+ +------------------+ +--------------------+
+
+Bu sınıf diyagramı, Animal sınıfını temsil eden bir temel sınıfı içerir. 
+Animal sınıfı, tür adı, ağırlık, yaş gibi ortak özelliklere ve getDosage ve getFeedSchedule adlı işlevlere sahiptir. 
+Ayrıca, makeSound adlı bir işlevi vardır ki bu işlevi alt sınıflarında uygulayacaktır.
+
+Horse, Feline (kedigiller), ve Rodent (kemirgenler) gibi alt sınıflar, Animal sınıfından türetilmiştir ve her biri kendi türlerine özgü özellikleri (örneğin, atların cinsi) ve makeSound işlevini uygularlar. 
+Bu sayede her tür için farklı davranışlar tanımlayabiliriz. 
+Polimorfizm kullanarak, her hayvan türü için aynı şekilde erişilebilen getDosage ve getFeedSchedule işlevlerini uygulayabiliriz, ancak her tür için farklı davranışlar sağlanır.
