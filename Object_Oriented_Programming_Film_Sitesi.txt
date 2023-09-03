@@ -1,0 +1,51 @@
+                    +------------------------------------------------+
+                    |      MovieApp                                  |
+                    +------------------------------------------------+
+                    | - users: List<User>                            |
+                    | - movies: List<Movie>                          |
+                    +------------------------------------------------+
+                    | + addUser(user: User): void                    |
+                    | + addMovie(movie: Movie): void                 |
+                    | + requestMovie(movie: Movie, user: User): void |
+                    +------------------------------------------------+
+                          /                        |                  \
+                         /                         |                   \
+                        /                          |                    \
+         +-----------------------------------+ +---------------------+ +----------------------+
+         |      User                         | |       Movie         | |      Subscription    |
+         +-----------------------------------+ +---------------------+ +----------------------+
+         | - id: int                         | | - id: int           | | - id: int            |
+         | - name: String                    | | - title: String     | | - user: User         |
+         | - isSubscriber: boolean           | | - genre: String     | | - subscriptionType: String |
+         | - credits: double                 | | - price: double     | | - credits: double    |
+         +-----------------------------------+ +---------------------+ +----------------------+
+         | + rentMovie(movie: Movie): void   | | + buyMovie(): void  |              |
+         | + buyCredits(amount: double): void| |                     |              |
+         +-----------------------------------+ +---------------------+              |
+                                                                                    |
+                                                                            +-------------------+
+                                                                            |    Request        |
+                                                                            +-------------------+
+                                                                            | - id: int         |
+                                                                            | - movie: Movie    |
+                                                                            | - user: User      |
+                                                                            +-------------------+
+
+Bu sınıf diyagramı aşağıdaki temel bileşenleri içerir:
+
+MovieApp: Uygulamanın ana sınıfı. Kullanıcıları, filmleri ve talepleri yönetir. 
+Kullanıcıları eklemek, filmleri eklemek ve talepleri işlemek için işlevler içerir.
+
+User: Kullanıcıları temsil eden sınıf. Her kullanıcının bir kimliği, adı, abonelik durumu (isSubscriber), kredi miktarı ve kiraladığı filmler gibi özellikleri bulunur. 
+Kullanıcılar, filmleri kiralayabilir, kredi satın alabilir ve taleplerde bulunabilirler.
+
+Movie: Filmleri temsil eden sınıf. Her filmin bir kimliği, başlığı, türü, fiyatı ve mevcut olup olmadığı gibi özellikleri bulunur. 
+Kullanıcılar, filmleri kiralayabilir veya satın alabilirler.
+
+Subscription: Kullanıcıların aboneliklerini temsil eden sınıf. Abonelikler, kullanıcıya kredi miktarı ve abonelik türünü tanımlar. 
+Abonelikli kullanıcılar, kredilerini kullanarak filmleri kiralayabilirler.
+
+Request: Kullanıcıların yeni filmler talep etmesini temsil eden sınıf. Her talebin bir kimliği, talep edilen filmi ve talep eden kullanıcıyı gösteren özellikleri bulunur.
+
+Bu sınıf diyagramı, online film satan veya kiralayan bir uygulamanın temel işlevlerini ve ilişkilerini gösterir. 
+Kullanıcılar abonelik alabilir, kredi satın alabilir, filmleri kiralayabilir veya satın alabilirler ve yeni filmler talep edebilirler.

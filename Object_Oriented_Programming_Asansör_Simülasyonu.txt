@@ -1,0 +1,54 @@
+                     +------------------------+
+                     |     Building           |
+                     +------------------------+
+                     | - floors: int          |
+                     | - elevators: Elevator[] |
+                     +------------------------+
+                     | + callElevator(floor: int, direction: Direction): Elevator |
+                     +------------------------+
+                            /      |       \
+                           /       |        \
+                          /        |         \
+         +-------------------+ +------------------+ +----------------------+
+         |     Elevator      | |       Door       | |      ControlPanel    |
+         +-------------------+ +------------------+ +----------------------+
+         | - id: int         | | - isOpen: boolean | | - buttons: Button[] |
+         | - currentFloor: int| +------------------+ +----------------------+
+         | - direction: Direction | | + open(): void | | + pressButton(button: Button): void |
+         | - passengers: Passenger[] | | + close(): void | | + clearButtons(): void |
+         +-------------------+ +------------------+ +----------------------+
+         | + move(direction: Direction): void | | | + notifyElevatorArrival(floor: int): void |
+         | + addPassenger(passenger: Passenger): void| | | |
+         +-------------------+ +------------------+ +----------------------+
+                            /  |          \
+                           /   |           \
+                          /    |            \
+         +-------------------+ +------------------+ +----------------------+
+         |     Passenger     | |      Button      | |     ArrivalBell     |
+         +-------------------+ +------------------+ +----------------------+
+         | - id: int         | | - floor: int     | | - floor: int        |
+         | - currentFloor: int| | - direction: Direction | +------------------+
+         | - destinationFloor: int| | + press(): void | | + ring(): void   |
+         +-------------------+ +------------------+ +----------------------+
+
+
+Bu sınıf diyagramı aşağıdaki temel bileşenleri içerir:
+
+Building: Bina sınıfı, kat sayısı ve içinde bulunan asansörler gibi özelliklere sahiptir. 
+Ayrıca, kullanıcının asansör çağırmasını sağlayan callElevator işlevine sahiptir.
+
+Elevator: Her asansörün kimliği, mevcut katı, hareket yönü, içindeki yolcular ve varış katı gibi özellikleri bulunur. 
+Asansör, move işlevi ile hareket eder ve yolcular eklemek için addPassenger işlevini kullanır.
+
+Door: Her asansörün iç ve dış kapılarını temsil eden sınıf. Kapıların açılması ve kapanması işlevleri vardır.
+
+ControlPanel: Her asansörün kontrol panelini temsil eder ve içinde düğmeler bulunur. Bu düğmeleri kullanarak kullanıcılar hedef katlarını seçerler.
+
+Passenger: Yolcuları temsil eden sınıf. Her yolcunun kimliği, mevcut katı ve gitmek istediği kat gibi özellikleri vardır.
+
+Button: Asansör çağrı düğmelerini temsil eden sınıf. Yolcular bu düğmelere basarak asansör çağırırlar.
+
+ArrivalBell: Katlardaki varış zillerini temsil eden sınıf. Asansör bir kata vardığında bu zil çalar.
+
+Bu sınıf diyagramı, online film satan veya kiralayan bir uygulamanın temel işlevlerini ve ilişkilerini gösterir. 
+Nesne Yönelimli Programlama ilkeleri olan Encapsulation, Inheritance, Polymorphism, ve Abstraction bu tasarımda kullanılmıştır.
