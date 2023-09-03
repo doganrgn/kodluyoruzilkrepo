@@ -1,0 +1,10 @@
+Verilen diziyi Merge Sort algoritması ile sıralamak için aşamalar şu şekildedir:
+
+Başlangıç Dizi: [16, 21, 11, 8, 12, 22]
+
+Adım: [16, 21] [11, 8] [12, 22]
+Adım: [11, 16, 21] [8] [12, 22]
+Adım: [8, 11, 12, 16, 21, 22]
+Dizi bu adımlar sonucunda sıralanmış olur.
+
+Verilen dizinin Merge Sort ile sıralanması durumunda zaman karmaşıklığı O(6 log 6) olacaktır.

@@ -1,0 +1,110 @@
+Başlangıç Dizi: [7, 5, 1, 8, 3, 6, 0, 9, 4, 2]
+
+Adım: İlk eleman olan 7, ağacın kökü (root) olur.
+
+Copy code
+7
+Adım: 5, 7'nin sol altında yer alır.
+
+Copy code
+7
+ \
+  5
+Adım: 1, 5'in sol altında yer alır.
+
+Copy code
+7
+ \
+  5
+ /
+1
+Adım: 8, 7'nin sağ altında yer alır.
+
+Copy code
+7
+ \
+  5
+ / \
+1   8
+Adım: 3, 5'in sol altında yer alır.
+
+Copy code
+7
+ \
+  5
+ / \
+1   8
+ \
+  3
+Adım: 6, 3'ün sağ altında yer alır.
+
+markdown
+Copy code
+7
+ \
+  5
+ / \
+1   8
+ \
+  3
+   \
+    6
+Adım: 0, 1'in sol altında yer alır.
+
+Copy code
+7
+ \
+  5
+ / \
+1   8
+/
+0 3
+6
+
+markdown
+Copy code
+
+8. Adım: 9, 8'in sağ altında yer alır.
+
+7
+5
+/
+1 8
+/ \
+0 3 9
+6
+
+markdown
+Copy code
+
+9. Adım: 4, 3'ün sağ altında yer alır.
+
+7
+5
+/
+1 8
+/ \
+0 3 9
+6
+4
+
+markdown
+Copy code
+
+10. Adım: 2, 3'ün sol altında yer alır.
+
+ ```
+ 7
+  \
+   5
+  / \
+ 1   8
+/ \   \
+0   3   9
+/   \
+2     6
+    /
+   4
+ ```
+
+Dizi, yukarıdaki adımları takip ederek bir Binary Search Tree oluşturulur.

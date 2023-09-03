@@ -1,0 +1,32 @@
+Verilen diziyi Insertion Sort algoritması ile sıralamak için aşamalar şu şekildedir:
+
+Başlangıç Dizi: [22, 27, 16, 2, 18, 6]
+
+Adım: [22] [27, 16, 2, 18, 6]
+Adım: [22, 27] [16, 2, 18, 6]
+Adım: [16, 22, 27] [2, 18, 6]
+Adım: [2, 16, 22, 27] [18, 6]
+Adım: [2, 16, 18, 22, 27] [6]
+Adım: [2, 6, 16, 18, 22, 27] []
+
+Dizi sıralandıktan sonra:
+
+18 sayısı için:
+Best case: Dizi başında bulunur.
+Worst case: Dizi sonunda bulunur.
+Average case: Orta bir konumda bulunur.
+Bu nedenle 18 sayısı için:
+
+Worst case: Aradığımız sayının sonda olmasıdır.
+
+-----------------------------------------------------------------------------------------------
+
+[7, 3, 5, 8, 2, 9, 4, 15, 6] dizisinin Selection Sort algoritması ile ilk 4 adımı şu şekildedir:
+
+Başlangıç Dizi: [7, 3, 5, 8, 2, 9, 4, 15, 6]
+
+Adım: [2] [7, 3, 5, 8, 9, 4, 15, 6]
+Adım: [2, 3] [7, 5, 8, 9, 4, 15, 6]
+Adım: [2, 3, 4] [7, 5, 8, 9, 15, 6]
+Adım: [2, 3, 4, 5] [7, 8, 9, 15, 6]
+Bu adımlar sonucunda ilk 4 eleman sıralanmış olur.
